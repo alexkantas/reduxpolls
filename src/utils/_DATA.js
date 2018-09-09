@@ -31,6 +31,17 @@ let users = {
       "6ni6ok3ym7mf1p33lnez": 'd'
     },
     polls: ['6ni6ok3ym7mf1p33lnez', 'xj352vofupe1dqz9emx13r'],
+  },
+  Alex_Kantas: {
+    id: 'Alex_Kantas',
+    name: 'Alex Kantas',
+    avatarURL: 'http://kantas.net/alex/img/me.jpg',
+    answers: {
+      "xj352vofupe1dqz9emx13r": 'a',
+      "vthrdm985a262al8qx3do": 'd',
+      "6ni6ok3ym7mf1p33lnez": 'a'
+    },
+    polls: ['6ni6ok3ym7mf1p33lnez', 'xj352vofupe1dqz9emx13r'],
   }
 }
 
