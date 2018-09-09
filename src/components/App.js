@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import { Container, Navbar, NavbarBrand, NavItem, NavLink, Nav } from 'reactstrap';
+import TopBar from './TopBar';
 import Dashboard from './Dashboard';
 import handleInitalData from '../actions/shared'
 import Loading from './Loading'
@@ -14,22 +14,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
-          <Container>
-            <NavbarBrand href="/">Polls</NavbarBrand>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink >Home</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink >Leaderboard</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink >Add Poll</NavLink>
-              </NavItem>
-            </Nav>
-          </Container>
-        </Navbar>
+        <TopBar />
         <Container>
           {this.props.loading === true
             ? <Loading />
