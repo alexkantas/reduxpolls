@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import TopBar from './TopBar';
-import Dashboard from './Dashboard';
+import { Container } from 'reactstrap';
 import handleInitalData from '../actions/shared'
 import Loading from './Loading'
+import TopBar from './TopBar';
+import Dashboard from './Dashboard';
+import Leaderboard from './Leaderboard';
 
 class App extends Component {
 
@@ -14,11 +16,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <TopBar />
+        <TopBar activeView={'Leaderboard'} />
         <Container>
           {this.props.loading === true
             ? <Loading />
-            : <Dashboard />}
+            : <Leaderboard />}
         </Container>
       </div>
     )
