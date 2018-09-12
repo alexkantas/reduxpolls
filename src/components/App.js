@@ -6,6 +6,15 @@ import Loading from './Loading'
 import TopBar from './TopBar';
 import Dashboard from './Dashboard';
 import Leaderboard from './Leaderboard';
+import AddPoll from './AddPoll';
+
+export const Views = {
+  DASHBOARD:'DASHBOARD',
+  LEADERBOARD:'LEADERBOARD',
+  ADDPOLL:'ADDPOLL'
+}
+
+var activeView = Views.ADDPOLL;
 
 class App extends Component {
 
@@ -16,11 +25,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <TopBar activeView={'Leaderboard'} />
+        <TopBar activeView={activeView} />
         <Container>
           {this.props.loading === true
             ? <Loading />
-            : <Leaderboard />}
+            : <AddPoll />}
         </Container>
       </div>
     )

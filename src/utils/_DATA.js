@@ -35,7 +35,7 @@ let users = {
   Alex_Kantas: {
     id: 'Alex_Kantas',
     name: 'Alex Kantas',
-    avatarURL: 'http://kantas.net/alex/img/me.jpg',
+    avatarURL: 'https://avatars0.githubusercontent.com/u/7612837?v=4',
     answers: {
       "xj352vofupe1dqz9emx13r": 'a',
       "vthrdm985a262al8qx3do": 'd',
