@@ -9,7 +9,6 @@ import reducer from './reducers'
 import middleware from './middleware'
 
 const store = createStore(reducer, middleware);
-console.log('V F T',store.getState());
 ReactDOM.render(
     <Provider store={store}>
         <App />

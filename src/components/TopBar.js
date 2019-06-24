@@ -1,21 +1,21 @@
 import React from 'react'
-import { Container, Navbar, NavbarBrand, NavItem, NavLink, Nav } from 'reactstrap';
-import { Views } from './App';
+import { Container, Navbar, NavbarBrand, NavItem, Nav } from 'reactstrap';
+import { NavLink } from 'react-router-dom'
 
 export default function TopBar({ activeView }) {
     return (
         <Navbar color="light" light expand="md">
             <Container>
-                <NavbarBrand href="/">Polls</NavbarBrand>
+                <NavbarBrand >Polls</NavbarBrand>
                 <Nav className="ml-auto" navbar>
                     <NavItem>
-                        <NavLink active={activeView === Views.DASHBOARD}>Home</NavLink>
+                        <NavLink to='/' exact>Home</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink active={activeView === Views.LEADERBOARD}>Leaderboard</NavLink>
+                        <NavLink to='/leaderboard' >Leaderboard</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink active={activeView === Views.ADDPOLL}>Add Poll</NavLink>
+                        <NavLink to='/add'>Add Poll</NavLink>
                     </NavItem>
                 </Nav>
             </Container>

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
+import { handleAddPoll } from '../actions/polls';
 
 class AddPoll extends Component {
     state = {
@@ -21,10 +23,16 @@ class AddPoll extends Component {
         return question == '' || a == '' || b == '' || c == '' || d == ''
     }
 
+    handleSubmit = e => {
+        e.preventDefault();
+        this.props.history.push('/')
+        this.props.dispatch(handleAddPoll(this.state))
+    }
+
     render() {
         return (
             <div>
-                <Form style={{ marginTop: '2em' }}>
+                <Form style={{ marginTop: '2em' }} onSubmit={this.handleSubmit}>
                     <FormGroup>
                         <Label for="question"><h2>What's your Question ?</h2></Label>
                         <Input type="text" onChange={this.handleInputChange} value={this.state.question} name="question" id="question" placeholder="Type your question" />
@@ -46,11 +54,11 @@ class AddPoll extends Component {
                         <Label for="d">D</Label>
                         <Input onChange={this.handleInputChange} value={this.state.d} type="text" name="d" id="d" placeholder="Type option d" />
                     </FormGroup>
-                    <Button type='button' disabled={this.isDisabled()} outline>Submit</Button>
+                    <Button type='submit' disabled={this.isDisabled()} outline>Submit</Button>
                 </Form>
             </div>
         )
     }
 }
 
-export default AddPoll;
+export default connect()(AddPoll);

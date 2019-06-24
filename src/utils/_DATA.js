@@ -39,7 +39,7 @@ let users = {
     answers: {
       "xj352vofupe1dqz9emx13r": 'a',
       "vthrdm985a262al8qx3do": 'd',
-      "6ni6ok3ym7mf1p33lnez": 'a'
+      "6ni6ok3ym7mf1p33lnez": 'd'
     },
     polls: ['6ni6ok3ym7mf1p33lnez', 'xj352vofupe1dqz9emx13r'],
   }
@@ -87,7 +87,7 @@ let polls = {
     },
     d: {
       text: 'Angular.js',
-      votes: ['dan_abramov'],
+      votes: ['dan_abramov','Alex_Kantas'],
     }
   },
   "am8ehyc8byjqgar0jgpub9": {
@@ -153,7 +153,7 @@ let polls = {
     },
     d: {
       text: 'Other',
-      votes: ['dan_abramov'],
+      votes: ['dan_abramov','Alex_Kantas','Goofy'],
     }
   },
   "xj352vofupe1dqz9emx13r": {
@@ -163,7 +163,7 @@ let polls = {
     timestamp: 1493579767190,
     a: {
       text: 'Kanye West',
-      votes: ['dan_abramov'],
+      votes: ['dan_abramov','Alex_Kantas'],
     },
     b: {
       text: 'Donald Trump',
@@ -240,7 +240,6 @@ export function _savePollAnswer ({ authedUser, id, answer }) {
     setTimeout(() => {
       const user = users[authedUser]
       const poll = polls[id]
-
       users = {
         ...users,
         [authedUser]: {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Row, Col, Button } from 'reactstrap'
+import { Link } from 'react-router-dom'
 
 class Dashboard extends Component {
     state = { showAnswered: false };
@@ -30,7 +31,7 @@ class Dashboard extends Component {
                 <Row>
                     <ul className="list-unstyled">
                         {list.map(poll => (
-                            <li key={poll.id} className="lead">{poll.question}</li>
+                            <li key={poll.id} className="lead"><Link to={`poll/${poll.id}`}>{poll.question}</Link></li>
                         ))}
                     </ul>
                 </Row>
